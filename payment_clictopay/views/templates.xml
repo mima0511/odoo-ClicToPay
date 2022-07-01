@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <template id="clictopay_form">
+      <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+      <input name="csrf_token"  t-att-value="request.csrf_token()" type="hidden"/>
+      <input name="return_url" t-att-value="return_url" type="hidden"/>
+      <input name="reference" id="reference" t-att-value="reference"  type="hidden"/>
+      <input name="amount"  id="amount" t-att-value="amount or &quot;0.0&quot;" type="hidden"/>
+      <input name="currency" id="currency" t-att-value="currency" type="hidden"/>
+      <input name="acquirer"  id="acquirer" t-att-value="acquirer" type="hidden"/>
+      <script type="text/javascript" src="/payment_clictopay/static/js/payment_clictopay.js"></script>
+
+  </template>
+
+</odoo>
